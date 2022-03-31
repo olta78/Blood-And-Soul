@@ -35,10 +35,14 @@ namespace Sbor
 
         private void btStart_Click(object sender, EventArgs e)
         {
-            minDes.Text = "5";
-            minEd.Text = "9";
-            secDes.Text = "5";
-            secEd.Text = "9";
+            minDes1 = 5;
+            minEd1 = 9;
+            secDes1 = 5;
+            secEd1 = 9;
+            minDes.Text = minDes1.ToString();
+            minEd.Text = minEd1.ToString();
+            secDes.Text = secDes1.ToString();
+            secEd.Text = secEd1.ToString();
             trDelay.Enabled = true;
         }
 
@@ -80,12 +84,12 @@ namespace Sbor
             }
             if ((minDes1 == 0) && (minEd1 == 0) && (secDes1 == 0) && (secEd1 == 0))
             {
-                trDelay.Enabled = false;
                 player.Play();
                 minDes.Text = "0";
                 minEd.Text = "0";
                 secDes.Text = "0";
                 secEd.Text = "0";
+                trDelay.Enabled = false;
             }
         }
     }
